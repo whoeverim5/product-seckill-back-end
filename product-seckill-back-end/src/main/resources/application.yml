@@ -1,0 +1,26 @@
+server:
+  port: 80
+
+spring:
+  datasource:
+    druid:
+      url: jdbc:mysql://localhost:3306/shop_seckill?serverTimezone=GMT&useUnicode=true&characterEncoding=utf-8
+      #      url: jdbc:mysql://192.168.229.128:3306/lab?serverTimezone=GMT&useUnicode=true&characterEncoding=utf-8
+      username: root
+      password: womensange3
+      driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    password: womensange3
+    port: 6379
+    host: 192.168.229.128
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        min-idle: 0
+        max-idle: 8
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: false
